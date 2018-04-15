@@ -734,7 +734,7 @@ angular.module('textAngularSetup', [])
 @license textAngular
 Author : Austin Anderson
 License : 2013 MIT
-Version 1.5.16
+Version 1.5.17
 
 See README.md or https://github.com/fraywing/textAngular/wiki for requirements and use.
 */
