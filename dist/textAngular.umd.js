@@ -57,7 +57,7 @@ angular.module('textAngularSetup', [])
     }
   })
 
-.value('taSelectableElements', ['a', 'img', 'variable'])
+.value('taSelectableElements', ['a', 'img', 'var'])
 
 .value('taCustomRenderers', [{
   // Parse back out: '<div class="ta-insert-video" ta-insert-video src="' + urlLink + '" allowfullscreen="true" width="300" frameborder="0" height="250"></div>'
