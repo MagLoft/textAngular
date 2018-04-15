@@ -60,8 +60,6 @@ angular.module('textAngularSetup', [])
 .value('taSelectableElements', ['a', 'img', 'var'])
 
 .value('taCustomRenderers', [{
-  // Parse back out: '<div class="ta-insert-video" ta-insert-video src="' + urlLink + '" allowfullscreen="true" width="300" frameborder="0" height="250"></div>'
-  // To correct video element. For now only support youtube
   selector: 'img',
   customAttribute: 'ta-insert-video',
   renderLogic: function(element) {
@@ -73,6 +71,11 @@ angular.module('textAngularSetup', [])
     });
     iframe.attr('src', iframe.attr('ta-insert-video'));
     element.replaceWith(iframe);
+  }
+},{
+  selector: 'var',
+  renderLogic: function(element) {
+    element.attr("contenteditable", "false");
   }
 }])
 
@@ -734,7 +737,7 @@ angular.module('textAngularSetup', [])
 @license textAngular
 Author : Austin Anderson
 License : 2013 MIT
-Version 1.5.17
+Version 1.5.18
 
 See README.md or https://github.com/fraywing/textAngular/wiki for requirements and use.
 */

@@ -44,8 +44,6 @@ angular.module('textAngularSetup', [])
 .value('taSelectableElements', ['a', 'img', 'var'])
 
 .value('taCustomRenderers', [{
-  // Parse back out: '<div class="ta-insert-video" ta-insert-video src="' + urlLink + '" allowfullscreen="true" width="300" frameborder="0" height="250"></div>'
-  // To correct video element. For now only support youtube
   selector: 'img',
   customAttribute: 'ta-insert-video',
   renderLogic: function(element) {
